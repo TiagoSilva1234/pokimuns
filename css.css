@@ -1,4 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #505050;
+}
+
 #card {
+  position: relative;
+  top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +111,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100%;
 }
 
@@ -108,9 +118,72 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
-.all select {
+
+.container {
   width: 200px;
+  position: relative;
+}
+
+.img {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  top: -40px;
+  left: 155px;
+  transform: scaleY(1);
+  transition: all 0.3s ease;
+}
+
+.imgB {
+  transform: scaleY(-1);
+  top: -44px;
+}
+
+.click, .links, .linksB {
+  font-size: 1.2em;
+  font-family: futura Md BT;
+  outline: none;
+  width: 200px;
+  color: black;
+  transition: 0.3s;
+  border: none;
+  padding: 12px;
+}
+.click:hover, .links:hover, .linksB:hover {
+  background-color: gray;
+}
+
+.links, .linksB {
+  background-color: white;
+}
+
+.linksB {
+  color: white;
+  background-color: black;
+}
+
+.click {
+  background-color: lightgrey;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 60px;
+}
+
+.list {
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+  width: inherit;
+  z-index: 1;
+}
+
+.newlist {
+  transform: scaleY(1);
 }
 
 /*# sourceMappingURL=css.css.map */
